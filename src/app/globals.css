@@ -1,27 +1,27 @@
+@import "./../styles/components.css";
+@import "./../styles/base.css";
+
 @tailwind base;
+h1 {
+  @apply text-[36px] font-bold leading-[44px] md:text-[64px] md:leading-[78px];
+}
+h2 {
+  @apply text-[32px] font-bold leading-[40px] md:text-[40px]  md:leading-[48px];
+}
+h3 {
+  @apply text-[26px] font-bold leading-[32px] md:text-[32px] md:leading-[38px];
+}
+h4 {
+  @apply text-[22px] font-bold leading-[28px] md:text-[28px] md:leading-[32px];
+}
+h5 {
+  @apply text-[18px] font-bold leading-[24px] md:text-[24px] md:leading-[32px];
+}
+
 @tailwind components;
+
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+svg {
+  shape-rendering: auto;
 }

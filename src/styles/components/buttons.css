@@ -1,0 +1,169 @@
+a.button,
+button {
+  @apply relative flex w-full cursor-pointer flex-row items-center justify-center overflow-hidden rounded-md  border-primary-500 outline  outline-1 outline-transparent transition-all duration-200 hover:outline-[3px] active:outline-1 active:outline-offset-2;
+
+  &.left {
+    @apply justify-start;
+  }
+
+  & svg {
+    @apply mx-1 flex h-4 w-4 items-center justify-center stroke-current;
+  }
+  &.default,
+  &.white {
+    @apply shadow-lg hover:shadow-none;
+  }
+  &.default,
+  &.white {
+    @apply bg-gradient-to-b;
+  }
+  &.default {
+    @apply text-white;
+  }
+  &.text {
+  }
+  &.white {
+    @apply from-white outline-white;
+  }
+  &.text {
+    @apply underline underline-offset-4;
+  }
+  &.primary {
+    &.default {
+      @apply from-primary-700 to-primary-800 shadow-primary-700/40 outline-primary-900;
+    }
+    &.white {
+      @apply to-primary-100 text-primary-800 shadow-primary-700/40 outline-primary-200;
+    }
+    &.invert,
+    &.text {
+      @apply text-primary-800 hover:text-primary-900;
+    }
+    &.invert {
+      @apply outline-primary-700 hover:outline-primary-800;
+    }
+  }
+  &.secondary {
+    &.default {
+      @apply from-secondary-700 to-secondary-800 shadow-secondary-700/40 outline-secondary-900;
+    }
+    &.white {
+      @apply to-secondary-100 text-secondary-800 shadow-secondary-700/40 outline-secondary-200;
+    }
+    &.invert,
+    &.text {
+      @apply text-secondary-800 hover:text-secondary-900;
+    }
+    &.invert {
+      @apply outline-secondary-700 hover:outline-secondary-800;
+    }
+  }
+  &.alternative {
+    &.default {
+      @apply from-alternative-700 to-alternative-800 shadow-alternative-700/40 outline-alternative-900;
+    }
+    &.white {
+      @apply to-alternative-100 text-alternative-800 shadow-alternative-700/40 outline-alternative-200;
+    }
+    &.invert,
+    &.text {
+      @apply text-alternative-800 hover:text-alternative-900;
+    }
+    &.invert {
+      @apply outline-alternative-700 hover:outline-alternative-800;
+    }
+  }
+  &.extra {
+    &.default {
+      @apply from-extra-700 to-extra-800 shadow-extra-700/40 outline-extra-900;
+    }
+    &.white {
+      @apply to-extra-100 text-extra-800 shadow-extra-700/40 outline-extra-200;
+    }
+    &.invert,
+    &.text {
+      @apply text-extra-800 hover:text-extra-900;
+    }
+    &.invert {
+      @apply outline-extra-700 hover:outline-extra-800;
+    }
+  }
+  &.red {
+    &.default {
+      @apply from-red-700 to-red-800 shadow-red-700/40 outline-red-900;
+    }
+    &.white {
+      @apply to-red-100 text-red-800 shadow-red-700/40 outline-red-200;
+    }
+    &.invert,
+    &.text {
+      @apply text-red-800 hover:text-red-900;
+    }
+    &.invert {
+      @apply outline-red-700 hover:outline-red-800;
+    }
+  }
+  &.green {
+    &.default {
+      @apply from-green-700 to-green-800 shadow-green-700/40 outline-green-900;
+    }
+    &.white {
+      @apply to-green-100 text-green-800 shadow-green-700/40 outline-green-200;
+    }
+    &.invert,
+    &.text {
+      @apply text-green-800 hover:text-green-900;
+    }
+    &.invert {
+      @apply outline-green-700 hover:outline-green-800;
+    }
+  }
+  &.gray {
+    &.default {
+      @apply from-black-700 to-black-800 shadow-black-700/40 outline-black-900;
+    }
+    &.white {
+      @apply to-black-100 text-black-800 shadow-black-700/40 outline-black-200;
+    }
+    &.invert,
+    &.text {
+      @apply text-white hover:text-white/90;
+    }
+    &.invert {
+      @apply outline-white hover:outline-white/90;
+    }
+  }
+  &.small {
+    @apply space-x-1 p-1.5 text-[14px] font-bold;
+    & svg {
+      @apply h-3.5 w-3.5;
+    }
+  }
+  &.medium {
+    @apply space-x-1 p-1 text-[16px] font-bold;
+    & svg {
+      @apply h-4 w-4;
+    }
+  }
+  &.large {
+    @apply space-x-1 p-2.5 text-[18px] font-bold;
+    & svg {
+      @apply h-5 w-5;
+    }
+  }
+  &.w-sm {
+    @apply w-full md:w-32;
+  }
+  &.w-md {
+    @apply w-full md:w-40;
+  }
+  &.w-lg {
+    @apply w-full md:w-48;
+  }
+  &.w-xl {
+    @apply w-full md:w-64;
+  }
+  &.w-2xl {
+    @apply w-full md:w-96;
+  }
+}

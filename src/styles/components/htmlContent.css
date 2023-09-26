@@ -1,0 +1,48 @@
+span.white-primary,
+span.white-secondary,
+span.primary,
+span.secondary {
+  @apply flex flex-col space-y-6;
+
+  & ul,
+  & ol {
+    @apply w-auto space-y-1 py-0 pl-10;
+  }
+  & ul {
+    @apply list-disc px-4;
+  }
+
+  & ol {
+    @apply ml-8 list-inside list-none px-2;
+    counter-reset: ol-counter;
+  }
+  & ol li {
+    @apply relative m-0 pb-2 text-base;
+    counter-increment: ol-counter;
+  }
+  & ol li a {
+    @apply underline;
+    /* counter-increment: ol-counter; */
+  }
+  & ol li::before {
+    @apply absolute -left-10  h-7 w-7 text-base font-bold;
+    content: counter(ol-counter);
+  }
+
+  & li::before {
+    @apply flex items-center justify-center rounded-full;
+  }
+}
+
+span.white-primary li::before {
+  @apply bg-white text-primary-900;
+}
+span.white-secondary li::before {
+  @apply bg-white text-secondary-900;
+}
+span.primary li::before {
+  @apply bg-primary text-white;
+}
+span.secondary li::before {
+  @apply bg-secondary text-white;
+}

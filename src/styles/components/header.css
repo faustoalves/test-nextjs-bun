@@ -1,0 +1,48 @@
+.header-gradient-primary {
+  @apply bg-header-graditent from-primary-600 to-primary-800 text-white;
+  & .box-title strong {
+    @apply text-primary-800;
+  }
+}
+.header-gradient-secondary {
+  @apply bg-header-graditent from-secondary-800 to-secondary text-white;
+  & .box-title strong {
+    @apply text-secondary-800;
+  }
+}
+.header {
+  @apply flex w-full flex-col items-center justify-center space-y-10 px-5 
+    py-12 text-center md:space-y-12 md:px-8
+    md:py-12 lg:space-y-14 lg:px-32 lg:py-24;
+  & p.subtitle {
+    @apply text-lg lg:text-xl;
+  }
+}
+.box-title {
+  @apply text-3xl font-bold leading-[1.25em] lg:text-6xl lg:leading-[1.25em];
+  & strong {
+    @apply bg-white px-1 py-0 font-bold md:p-1 lg:px-1.5 lg:py-1;
+  }
+}
+.normal-title {
+  @apply text-3xl font-bold leading-[1.25em] lg:text-6xl lg:leading-[1.25em];
+}
+.underline-title {
+  @apply text-3xl font-bold leading-[1.25em] lg:text-6xl lg:leading-[1.25em];
+  & strong {
+    @apply pb-1.5 font-bold lg:pb-2;
+    background-position: bottom left;
+    background-image: url("https://res.cloudinary.com/dkyl4jbxx/image/upload/v1684860738/assets/svgs/underline.svg");
+    background-repeat: repeat-x;
+    background-size: 100%;
+    object-fit: cover;
+  }
+}
+.arrow-cta-area {
+  @apply relative flex flex-row items-center justify-center sm:w-full md:absolute
+  md:w-arrowCTA md:flex-col md:items-end;
+
+  &.right {
+    @apply right-0 md:-top-4 md:items-start;
+  }
+}

@@ -1,0 +1,10 @@
+.default-container {
+  @apply mx-auto w-full px-4 py-12;
+}
+.container {
+  @apply !max-w-screen-xl;
+}
+
+.special-bg {
+  @apply bg-gradient-to-b from-primary-800 from-15% to-white to-15% md:from-30% md:to-30%;
+}

@@ -1,0 +1,110 @@
+.react-multi-carousel-list {
+  @apply relative flex items-center  overflow-hidden;
+}
+.react-multi-carousel-track {
+  @apply relative m-0 flex list-none flex-row p-0;
+}
+.react-multiple-carousel__arrow {
+  @apply absolute h-12 w-12 rounded-full bg-primary-600 opacity-100 outline-none transition-all  md:h-16 md:w-16;
+}
+.react-multiple-carousel__arrow:hover {
+  @apply bg-primary-600;
+}
+.react-multiple-carousel__arrow::before {
+  @apply absolute flex h-12 w-12 items-center justify-center rounded-full bg-primary-600 outline-none transition-all md:h-16 md:w-16;
+}
+.react-multiple-carousel__arrow:disabled {
+  cursor: default;
+  /* background: rgba(0, 0, 0, 0.5); */
+}
+.react-multiple-carousel__arrow--left {
+  @apply left-3;
+  /* left: calc(4% + 1px); */
+}
+.react-multiple-carousel__arrow--left::before {
+  @apply pr-1 pt-1;
+  content: url("data:image/svg+xml,%3Csvg  width='9' height='15'  viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 1L1.00184 7L7 13' stroke='%23FAFAFA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.react-multiple-carousel__arrow--right {
+  @apply right-3;
+
+  /* right: calc(4% + 1px); */
+}
+.react-multiple-carousel__arrow--right::before {
+  @apply pl-1 pt-1;
+  content: url("data:image/svg+xml,%3Csvg width='9' height='15' viewBox='0 0 9 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 14L7.48838 7.5L0.999999 1' stroke='%23FAFAFA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+.react-multi-carousel-dot-list {
+  position: absolute;
+  bottom: 15px;
+  display: flex;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  margin: auto 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+.react-multi-carousel-dot button {
+  @apply m-0 mr-1.5 mt-5 inline-block h-3 w-3 rounded-full border border-secondary-300/30 bg-secondary-100/30 p-1 outline-none;
+}
+.react-multi-carousel-dot button:hover:active {
+  @apply bg-primary;
+  /* background: #080808; */
+}
+.react-multi-carousel-dot--active button {
+  @apply bg-primary;
+
+  /* background: #080808; */
+}
+.react-multi-carousel-item {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .react-multi-carousel-item {
+    flex-shrink: 0 !important;
+  }
+  .react-multi-carousel-track {
+    overflow: visible !important;
+  }
+}
+[dir="rtl"].react-multi-carousel-list {
+  direction: rtl;
+}
+.rtl.react-multiple-carousel__arrow--right {
+  right: auto;
+  left: calc(4% + 1px);
+}
+.rtl.react-multiple-carousel__arrow--right::before {
+  content: "\e824";
+}
+.rtl.react-multiple-carousel__arrow--left {
+  left: auto;
+  right: calc(4% + 1px);
+}
+.rtl.react-multiple-carousel__arrow--left::before {
+  content: "\e825";
+}
+
+.stars {
+  & ul {
+    @apply m-0 flex flex-row space-x-0.5 p-0;
+  }
+  & li {
+    @apply m-0 h-5 w-5 p-0;
+    background-image: url("https://res.cloudinary.com/dkyl4jbxx/image/upload/v1685122223/assets/svgs/star.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  & .small li {
+    @apply h-4 w-4;
+  }
+  & .large li {
+    @apply h-6 w-6;
+  }
+}

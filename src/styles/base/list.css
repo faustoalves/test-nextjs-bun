@@ -1,0 +1,28 @@
+ol {
+  @apply ml-8 list-inside list-none p-2;
+  counter-reset: ol-counter;
+  &.secondary li::before {
+    @apply flex items-center justify-center rounded-full bg-secondary text-white;
+  }
+}
+ol li {
+  @apply relative m-0 pb-3 text-base;
+  counter-increment: ol-counter;
+}
+ol li a {
+  @apply underline;
+  /* counter-increment: ol-counter; */
+}
+ol li::before {
+  @apply absolute -left-10  h-7 w-7 text-base font-bold;
+  content: counter(ol-counter);
+}
+
+.dual-column {
+  & ol {
+    @apply md:mr-6 md:columns-2;
+  }
+  & ol li {
+    @apply pr-6;
+  }
+}
